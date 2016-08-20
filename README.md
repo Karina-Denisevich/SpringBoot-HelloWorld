@@ -33,7 +33,7 @@ public class HelloController {
     }
 }
 ```
-The class is flagged as a @RestController, meaning it’s ready for use by Spring MVC to handle web requests. @RequestMapping maps / to the index() method. When invoked from a browser or using curl on the command line, the method returns pure text.<br>
+The class is flagged as a `@RestController`, meaning it’s ready for use by Spring MVC to handle web requests. `@RequestMapping` maps / to the index() method. When invoked from a browser or using curl on the command line, the method returns pure text.<br>
 
 ___
 
@@ -48,14 +48,14 @@ public class Application {
     }
 }
 ```
-@SpringBootApplication is a convenience annotation that adds all of the following:
+`@SpringBootApplication` is a convenience annotation that adds all of the following:
 
-@Configuration tags the class as a source of bean definitions for the application context.
+* @Configuration tags the class as a source of bean definitions for the application context.
 
-@EnableAutoConfiguration tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings.
+* @EnableAutoConfiguration tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings.
 
-Normally you would add @EnableWebMvc for a Spring MVC app, but Spring Boot adds it automatically when it sees spring-webmvc on the classpath. This flags the application as a web application and activates key behaviors such as setting up a DispatcherServlet.
+* Normally you would add @EnableWebMvc for a Spring MVC app, but Spring Boot adds it automatically when it sees spring-webmvc on the classpath. This flags the application as a web application and activates key behaviors such as setting up a DispatcherServlet.
 
-@ComponentScan tells Spring to look for other components, configurations, and services in the the hello package, allowing it to find the HelloController.
+* @ComponentScan tells Spring to look for other components, configurations, and services in the the hello package, allowing it to find the HelloController.
 
 ___
